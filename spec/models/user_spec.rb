@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   
-  describe 'user validation' do
+  describe 'validations' do
     it "saves when all fields entered" do
       @user = User.new(
         first_name: "Michael",
@@ -120,6 +120,67 @@ RSpec.describe User, type: :model do
       @user.validate
       expect(@user).to be_invalid
     end
+  end
+
+  describe ".authenticate_with_credentials" do
+    
+    it "should authenticate with correct password" do
+      @user = User.new(
+        first_name: 'Michael',
+        last_name: 'Binnick',
+        email: 'mike@abc.com',
+        password: 'password123',
+        password_confirmation: 'password123'
+      )
+      @user.save
+      user = User.authenticate_with_credentials("mike@abc.com", "password123")
+      expect(user).to_not be_nil
+    end
+
+    it "shouldn't authenticate with incorrect password" do
+      @user = User.new(
+        first_name: 'Michael',
+        last_name: 'Binnick',
+        email: 'mike@abc.com',
+        password: 'password123',
+        password_confirmation: 'password123'
+      )
+      @user.save
+      user = User.authenticate_with_credentials("mike@abc.com", "password12woops")
+      expect(user).to be_nil
+    end
+
+    it "shouldn't authenticate with non-existent email" do
+      user = User.authenticate_with_credentials("martianman@earth.com", "eepeepzorp")
+      expect(user).to be_nil
+    end
+
+    it "should authenticate if email has different case" do
+      @user = User.new(
+        first_name: 'Michael',
+        last_name: 'Binnick',
+        email: 'mike@abc.com',
+        password: 'password123',
+        password_confirmation: 'password123'
+      )
+      @user.save
+      user = User.authenticate_with_credentials("MIKE@abc.com", "password123")
+      expect(user).to_not be_nil
+    end
+
+    it "should authenticate if email is preceeded or trailed by spaces" do
+      @user = User.new(
+        first_name: 'Michael',
+        last_name: 'Binnick',
+        email: 'mike@abc.com',
+        password: 'password123',
+        password_confirmation: 'password123'
+      )
+      @user.save
+      user = User.authenticate_with_credentials("mike@abc.com   ", "password123")
+      expect(user).to_not be_nil
+    end
+
   end
 
 end
