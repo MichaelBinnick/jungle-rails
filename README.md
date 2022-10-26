@@ -1,6 +1,28 @@
 # Jungle
 
-A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails. 
+Features include add-to-cart and checkout with Stripe,
+user authentication, admin dashboard and controls,
+Bootstrap CSS styling and a working database connection via PostgreSQL.
+
+Testing done with RSpec and Cypress.
+
+## Screenshots
+
+### Welcome Page
+!["Welcome Page"](https://github.com/MichaelBinnick/scheduler/blob/master/screenshots/Desktop.png?raw=true)
+
+### Product Cards
+!["Product Card"](https://github.com/MichaelBinnick/scheduler/blob/master/screenshots/Mobile.png?raw=true)
+!["Sold Out Badge"](https://github.com/MichaelBinnick/scheduler/blob/master/screenshots/Mobile-2.png?raw=true)
+
+### Product Page
+!["Product Page"](https://github.com/MichaelBinnick/scheduler/blob/master/screenshots/Mobile-2.png?raw=true)
+
+### Admin Controls
+!["Dashboard"](https://github.com/MichaelBinnick/scheduler/blob/master/screenshots/Mobile-2.png?raw=true)
+!["Categories"](https://github.com/MichaelBinnick/scheduler/blob/master/screenshots/Mobile-2.png?raw=true)
+
 
 ## Setup
 
@@ -19,7 +41,7 @@ If Rails is complaining about authentication to the database, uncomment the user
 
 ## Stripe Testing
 
-Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
+Use Credit Card # 4111 1111 1111 1111 for testing success scenarios. Put in a valid expiry date, and anything else can just be 1's.
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
 
