@@ -10,18 +10,18 @@ Testing done with RSpec and Cypress.
 ## Screenshots
 
 ### Welcome Page
-!["Welcome Page"](https://github.com/MichaelBinnick/scheduler/blob/master/screenshots/Desktop.png?raw=true)
+!["Welcome Page"](https://github.com/MichaelBinnick/jungle-rails/blob/master/app/assets/images/Welcome%20Page.png?raw=true)
 
 ### Product Cards
-!["Product Card"](https://github.com/MichaelBinnick/scheduler/blob/master/screenshots/Mobile.png?raw=true)
-!["Sold Out Badge"](https://github.com/MichaelBinnick/scheduler/blob/master/screenshots/Mobile-2.png?raw=true)
+!["Product Card"](https://github.com/MichaelBinnick/jungle-rails/blob/master/app/assets/images/Product%20Cards.png?raw=true)
+!["Sold Out Badge"](https://github.com/MichaelBinnick/jungle-rails/blob/master/app/assets/images/Dynamic%20Stock%20Status.png?raw=true)
 
 ### Product Page
-!["Product Page"](https://github.com/MichaelBinnick/scheduler/blob/master/screenshots/Mobile-2.png?raw=true)
+!["Product Page"](https://github.com/MichaelBinnick/jungle-rails/blob/master/app/assets/images/Product%20Page.png?raw=true)
 
 ### Admin Controls
-!["Dashboard"](https://github.com/MichaelBinnick/scheduler/blob/master/screenshots/Mobile-2.png?raw=true)
-!["Categories"](https://github.com/MichaelBinnick/scheduler/blob/master/screenshots/Mobile-2.png?raw=true)
+!["Dashboard"](https://github.com/MichaelBinnick/jungle-rails/blob/master/app/assets/images/Admin%20Dashboard.png?raw=true)
+!["Categories"](https://github.com/MichaelBinnick/jungle-rails/blob/master/app/assets/images/Admin%20Categories.png?raw=true)
 
 
 ## Setup
